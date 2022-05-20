@@ -1,0 +1,123 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+<section  class="h-100 h-custom gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4;">Login</h3>
+                   
+                  <div class="row">
+                     <div class="mb-2 pb-2">
+                    <div class="form-outline form-white">
+                      <input formControlName="email" type="email" id="form3Examplea2" class="form-control form-control-lg" />
+                        <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+                            <span *ngIf="email?.hasError('required')">O email é obrigatório</span>
+                            <span *ngIf="email?.hasError('email')">O email é inválido</span> <br>
+                            </small>
+                      <label class="form-label" for="form3Examplea2">Email</label>
+                    </div>
+                  </div>
+                  
+                    <div class="col-md-6">
+                    </div>
+                    
+                  </div>
+                  <div class="mb-1 pb-1">
+                    <div class="form-outline">
+                      <input formControlName="senha" type="password" id="form3Examplev4" class="form-control form-control-lg" />
+                      <small class="text-danger" *ngIf="senha?.touched && senha?.invalid">
+                      <span *ngIf="senha?.hasError('required')">A senha é obrigatória</span>
+                      <span *ngIf="senha?.hasError('minlength')">O mínimo é 8 caracteres</span><br>
+                    </small>
+                      <label class="form-label" for="form3Examplev4">Senha</label>
+                    </div>
+                  </div>
+                    <button  type="button" class="btn btn-primary btn-lg"
+                    data-mdb-ripple-color="dark">Entrar</button>
+                
+
+                </div>
+              </div>
+              <div  class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Cadastrar</h3>
+
+                  <div class="mb-2 pb-2">
+                    <div class="form-outline form-white">
+                      <input formControlName="email2" type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                      <small class="text-danger" *ngIf="email2?.touched && email2?.invalid">
+                            <span *ngIf="email2?.hasError('required')">O email é obrigatório</span>
+                            <span *ngIf="email2?.hasError('email')">O email é inválido</span> <br>
+                            </small>
+                      <label class="form-label" for="form3Examplea2">Email</label>
+                    </div>
+                  </div>
+
+                  <div class="mb-2 pb-2">
+                    <div class="form-outline form-white">
+                      <input formControlName="senha2" type="text" id="form3Examplea3" class="form-control form-control-lg" />
+                      <small class="text-danger" *ngIf="senha2?.touched && senha2?.invalid">
+                        <span *ngIf="senha2?.hasError('required')">A senha é obrigatória</span>
+                        <span *ngIf="senha2?.hasError('minlength')">O mínimo é 8 caracteres</span><br>
+                      </small>
+                      <label class="form-label" for="form3Examplea3">Senha</label>
+                    </div>
+                  </div>
+
+            
+
+                  <div class="mb-2 pb-2">
+                    <div class="form-outline form-white">
+                      <input formControlName="senha3" type="text" id="form3Examplea6" class="form-control form-control-lg" />
+                      <small class="text-danger" *ngIf="senha3?.touched && senha3?.invalid">
+                      <span *ngIf="senha3?.hasError('required')">A senha é obrigatória</span>
+                      <span *ngIf="senha3?.hasError('minlength')">O mínimo é 8 caracteres</span><br>
+                    </small>
+                      <label class="form-label" for="form3Examplea6">Confirme sua senha</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea7">CPF</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-7 mb-2 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea8">Celular</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-start mb-4 pb-2">
+                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label text-white" for="form2Example3">
+                      Eu aceito os <a href="#!" class="text-white"><u>termos de condição</u></a>
+                    </label>
+                  </div>
+
+                  <button type="button" class="btn btn-light btn-lg"
+                    data-mdb-ripple-color="dark">Register</button>
+
+                </div>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
