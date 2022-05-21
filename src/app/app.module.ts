@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
+import { PagErroComponent } from './components/pag-erro/pag-erro.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NgxMaskModule } from 'ngx-mask';
     NavbarComponent,
     CarouselComponent,
     CadastrarComponent,
+    PagErroComponent,
   ],
   imports: [
     BrowserModule,
