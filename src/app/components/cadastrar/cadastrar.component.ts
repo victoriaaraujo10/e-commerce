@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar',
@@ -10,33 +10,46 @@ export class CadastrarComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  cadastroForm = this.fb.group({
+  loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    email2: ['', [ Validators.required,Validators.email]],
-    endereco: ['', [Validators.required, Validators.maxLength(50)]],
+   
+    
     senha: ['', [Validators.required, Validators.minLength(8)]],
-    senha2: ['', [Validators.required, Validators.minLength(8)]],
-    senha3: ['', [Validators.required, Validators.minLength(8)]],
+    
   });
 
+  cadastroForm = this.fb.group({
+        email2: ['', [ Validators.required,Validators.email]],
+        cpf: ['', [Validators.required, Validators.minLength(11)]],
+        celular: ['', [Validators.required, Validators.minLength(11)]],
+        senha2: ['', [Validators.required, Validators.minLength(8)]],
+        senha3: ['', [Validators.required]],
+  },{
+    validators: this.MustMatch('senha2', 'senha3')
+  })
+
   get nome() {
-    return this.cadastroForm.get('nome');
+    return this.loginForm.get('nome');
   }
 
   get email() {
-    return this.cadastroForm.get('email');
+    return this.loginForm.get('email');
   }
 
    get email2() {
     return this.cadastroForm.get('email2');
   }
 
-  get endereco() {
-    return this.cadastroForm.get('endereco');
+  get cpf(){
+    return this.cadastroForm.get('cpf');
+  }
+
+  get celular(){
+    return this.cadastroForm.get('celular');
   }
 
   get senha() {
-    return this.cadastroForm.get('senha');
+    return this.loginForm.get('senha');
   }
   get senha2() {
     return this.cadastroForm.get('senha2');
@@ -45,9 +58,29 @@ export class CadastrarComponent implements OnInit {
     return this.cadastroForm.get('senha3');
   }
 
-  onSubmit() {
-    alert('Bem vindo(a)!');
-    console.log("sucessso");
+  MustMatch(controlName: string, matchingControlName: string){
+    return(formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+      if(matchingControl.errors && !matchingControl.errors['mustMatch']){
+        return;
+      };
+      if(control.value !== matchingControl.value){
+        matchingControl.setErrors({mustMatch: true});
+      }else{
+        matchingControl.setErrors(null);
+      }
+
+    }
+  }
+
+  onLogin() {
+    alert("Login feito com sucesso, bem vindo(a)")
+    console.log("funcionando...");
+  }
+
+  onCadastro(){
+    alert("Conta criada com sucesso!")
   }
 
   ngOnInit(): void {
