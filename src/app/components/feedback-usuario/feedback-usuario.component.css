@@ -1,0 +1,8 @@
+.bg-indigo {
+    background-color: #0d6efd;
+}
+.transition:hover {
+    background-color: #4992fe;
+    transition-delay: 0.2s;
+
+}

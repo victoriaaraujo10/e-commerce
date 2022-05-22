@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FeedbackUsuarioComponent } from './components/feedback-usuario/feedback-usuario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     ProdutosComponent,
     CarrinhoComponent,
+    FeedbackUsuarioComponent,
   ],
   imports: [
     BrowserModule,
