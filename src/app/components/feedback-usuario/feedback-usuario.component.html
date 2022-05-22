@@ -1,0 +1,57 @@
+<form [formGroup]="vaidacerto" (ngSubmit)="onSubmit()" class="m-1">
+    <section class="h-100 h-custom gradient-custom-2">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="card-body p-0 d-flex justify-content-center align-items-center">
+                    <div class="rounded bg-indigo text-white">
+                        <div class="p-5 modificacao">
+                            <h3 class="fw-normal mb-5">Sua opinião é valiosa para nós!</h3>
+                            <div class="mb-2 pb-2">
+                                <div class="form-outline form-white">
+                                    <label class="form-label" for="form3Examplea2">Seu Email</label>
+                                    <input formControlName="email" type="text" id="form3Examplea2"
+                                        class="form-control form-control-lg" />
+                                    <small class="text-warning" *ngIf="email?.touched && email?.invalid">
+                                        <span *ngIf="email?.hasError('required')">Email é Obrigatorio</span>
+                                        <span *ngIf="email?.hasError('email')">Email Invalido</span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="mb-2 pb-2">
+                                <div class="form-outline form-white">
+                                    <label class="form-label" for="form3Examplea3">Seu Nome</label>
+                                    <input formControlName="nome" type="text" id="form3Examplea3"
+                                        class="form-control form-control-lg" />
+                                    <small class="text-warning" *ngIf="nome?.touched && nome?.invalid">
+                                        <span *ngIf="nome?.hasError('required')">Seu nome é Obrigatorio</span>
+                                        <span *ngIf="nome?.hasError('minLength')">O minimo de carecteres é 5</span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="mb-2 pb-2">
+                                <div class="form-outline form-white">
+                                    <label class="form-label" for="form3Examplea6">FeedBack</label><br>
+                                    <textarea formControlName="feedback" name="feedback" id="form3Examplea6" cols="50" rows="4"></textarea><br>
+                                    <small class="text-warning" *ngIf="feedback?.touched && feedback?.invalid">
+                                        <span *ngIf="feedback?.hasError('required')">Seu FeedBack é Obrigatorio</span>
+                                        <span *ngIf="feedback?.hasError('minLength')">O minimo de carecteres é 20</span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="mb-2 pb-2">
+                                <label class="form-label" for="form3Examplea6">Sua Nota</label>
+                                <input  formControlName="nota" min="1" max="10" id="nota" type="number" name="nota" class="form-control"
+                                    required />
+                                    <small class="text-warning" *ngIf="nota?.touched && nota?.invalid">
+                                        <span *ngIf="nota?.hasError('required')">Sua Nota é Obrigatoria</span>
+                                    </small>
+                            </div>
+                                <button type="submit" class="transition btn btn-light btn-lg"
+                                data-mdb-ripple-color="dark" [disabled]="vaidacerto.invalid">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
