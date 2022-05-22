@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <br />
+      <h1 class="gallery-title">Produtos</h1>
+    </div>
+
+    <div align="center">
+      <button class="btn btn-default filter-button" data-filter="all">
+        Todos
+      </button>
+      <button class="btn btn-default filter-button" data-filter="hdpe">
+        Eletronicos
+      </button>
+      <button class="btn btn-default filter-button" data-filter="sprinkle">
+        Games
+      </button>
+      <button class="btn btn-default filter-button" data-filter="spray">
+        Cadeiras
+      </button>
+      <button class="btn btn-default filter-button" data-filter="irrigation">
+        Acessorios
+      </button>
+    </div>
+    <br />
+  </div>
+</div>
+
+<hr>
+<div class="height d-flex justify-content-center align-items-center">
+  <!-- <ng-container *ngFor="let item of listaProdutos ">
+
+</ng-container> -->
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of listaProdutos ">
+    <div class="card col-md-3">
+    <img src="{{item.image}}" alt="">
+    <h5 class="itemdata">{{item.title}}</h5>
+    <p class="itemdata">{{item.description}}</p>
+    <p class="itemdata">{{item.price | currency: 'BRL'}}</p>
+    <p>{{item.category}}</p>
+    <button class="btn btn-primary" (click)="addtoCart(item)">Adicionar</button>
+  </div>
+</ng-container>
+</div>
+</div>

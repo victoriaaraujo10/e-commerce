@@ -11,7 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { PagErroComponent } from './components/pag-erro/pag-erro.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { HomeComponent } from './components/home/home.component';
+import { ProdutosComponent } from './components/produtos/produtos.component';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,9 @@ import { FooterComponent } from './components/footer/footer.component';
     CadastrarComponent,
     PagErroComponent,
     FooterComponent,
+    HomeComponent,
+    ProdutosComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgxMaskModule.forRoot(),
   ],
   providers: [],
