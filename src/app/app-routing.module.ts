@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { PagErroComponent } from './components/pag-erro/pag-erro.component';
 import { FeedbackUsuarioComponent } from './components/feedback-usuario/feedback-usuario.component';
+import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'carrinho', component:CarrinhoComponent},
   {path:'cadastrar', component:CadastrarComponent},
   { path: 'feedback-usuario', component: FeedbackUsuarioComponent},
+  {path: 'sobre', component:SobreNosComponent},
   {path:'**', component:PagErroComponent}
 
 ];
