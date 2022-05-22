@@ -1,0 +1,141 @@
+<!-- Footer -->
+<footer class=" text-center text-white" style="background-color:#0d6efd;">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" target="_blank" style="background-color: #3b5998" href="https://www.facebook.com/SoulCodeAcademy" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" target="_blank" style="background-color: #55acee" href="https://twitter.com/SoulCodeAcademy" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" target="_blank" style="background-color: #ac2bac" href="https://www.instagram.com/soulcodeacademy/" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" target="_blank" style="background-color: #0082ca" href="https://www.linkedin.com/company/soulcodeacademy/" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+      
+    </section>
+    <!-- Section: Social media -->
+
+
+    
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Os preços anunciados neste site são meramente ilustrativos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <!-- Alterar justify-content caso adicione mais uma lista -->
+      <div class="row  justify-content-center">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Categorias</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Smartphones</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Hardware</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Acessorios</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Gamer</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Institucional</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Feedback do usuario</a>
+            </li>
+
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Minha conta</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="/cadastrar" class="text-white">Login/Cadastro</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <!-- Section: Form -->
+    <section >
+      <form  #ofertasForm="ngForm" (ngSubmit)="onSubmit()" >
+        <!--Grid row-->
+        <div class=" pt-3 row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Receba ofertas exclusivas no seu e-mail</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input placeholder="Seu email"  type="email" id="form5Example2" class="form-control" />
+              
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+
+            <!-- Submit button -->
+            <button [disabled]="ofertasForm.invalid" type="submit" class="btn btn-outline-light">
+              Cadastrar
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

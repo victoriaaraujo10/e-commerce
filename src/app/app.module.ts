@@ -10,6 +10,7 @@ import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { PagErroComponent } from './components/pag-erro/pag-erro.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PagErroComponent } from './components/pag-erro/pag-erro.component';
     CarouselComponent,
     CadastrarComponent,
     PagErroComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
