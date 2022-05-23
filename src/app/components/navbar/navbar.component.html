@@ -8,7 +8,7 @@
   />
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="home">
         <img
           src="https://s4.aconvert.com/convert/p3r68-cdx67/a4tfa-uju54.png"
           alt=""
@@ -28,7 +28,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav me-auto">
-          <a class="nav-link active border-bottom" aria-current="page" href="#"
+          <a class="nav-link active border-bottom" aria-current="page" href="home"
             >Home</a
           >
           <div ngbDropdown class="d-inline-block">
@@ -46,8 +46,8 @@
               <button ngbDropdownItem>Gamer</button>
             </div>
           </div>
-          <a class="nav-link" aria-current="page" href="#">Sobre nós</a>
-          <a class="nav-link" aria-current="page" href="#"
+          <a class="nav-link" aria-current="page" href="sobre">Sobre nós</a>
+          <a class="nav-link" aria-current="page" href="feedback-usuario"
             >Feedback do usuário</a
           >
         </div>
@@ -73,7 +73,7 @@
         <div class="badge bg-danger">{{totalItemNumber}}</div>
       </button>
       &nbsp; &nbsp; &nbsp;
-      <button class="btn btn-dark">
+      <button routerLink="cadastrar" class="btn btn-dark">
         <i style="font-size: 30px" class="bi bi-person-circle"></i>
       </button>
     </div>
