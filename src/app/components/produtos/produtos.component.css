@@ -1,20 +1,12 @@
 .gallery-title
 {
     font-size: 36px;
-    color: #0d6efd;
+    color: #485461;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 70px;
 }
-.gallery-title:after {
-    content: "";
-    position: absolute;
-    width: 7.5%;
-    left: 46.5%;
-    height: 45px;
-    border-bottom: 1px solid #5e5e5e;
-}
-.filter-button
+
+/* .filter-button
 {
     font-size: 18px;
     border: 1px solid #0d6efd;
@@ -73,4 +65,4 @@
 .card img:hover{
   transition: 0.3s ease-in-out;
   transform: scale(1.1);
-}
+} */
