@@ -17,6 +17,10 @@ import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FeedbackUsuarioComponent } from './components/feedback-usuario/feedback-usuario.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { HardwareComponent } from './components/hardware/hardware.component';
+import { SmartphonesComponent } from './components/smartphones/smartphones.component';
+import { AcessoriosComponent } from './components/acessorios/acessorios.component';
+import { GamerComponent } from './components/gamer/gamer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +34,10 @@ import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
     CarrinhoComponent,
     FeedbackUsuarioComponent,
     SobreNosComponent,
+    HardwareComponent,
+    SmartphonesComponent,
+    AcessoriosComponent,
+    GamerComponent,
   ],
   imports: [
     BrowserModule,

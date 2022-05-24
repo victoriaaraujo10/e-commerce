@@ -7,6 +7,10 @@ import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { PagErroComponent } from './components/pag-erro/pag-erro.component';
 import { FeedbackUsuarioComponent } from './components/feedback-usuario/feedback-usuario.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { HardwareComponent } from './components/hardware/hardware.component';
+import { SmartphonesComponent } from './components/smartphones/smartphones.component';
+import { AcessoriosComponent } from './components/acessorios/acessorios.component';
+import { GamerComponent } from './components/gamer/gamer.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,8 +19,11 @@ const routes: Routes = [
   {path:'cadastrar', component:CadastrarComponent},
   { path: 'feedback-usuario', component: FeedbackUsuarioComponent},
   {path: 'sobre', component:SobreNosComponent},
+  {path: 'hardware', component:HardwareComponent},
+  {path: 'smartphones', component:SmartphonesComponent},
+  {path: 'acessorios', component:AcessoriosComponent},
+  {path: 'gamer', component:GamerComponent},
   {path:'**', component:PagErroComponent}
-
 ];
 
 @NgModule({
