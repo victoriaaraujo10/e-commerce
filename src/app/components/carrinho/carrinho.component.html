@@ -7,29 +7,28 @@
             <tr>
               <th>ID</th>
               <th>Nome do Produto</th>
-              <th>Nome do Produto</th>
+              <th>Produto</th>
               <th>Descrição</th>
-              <th>Quantidade</th>
               <th>Total</th>
-              <th>Ação</th>
+              <th>Quantidade</th>
+              <th>Remover</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let item of produtos, let i = index">
               <td>{{i+1}}</td>
               <td>{{item.title}}</td>
-              <td><img src="{{item.image}}" style="width: 120px;" alt=""></td>
-              <td style="width: 20%;">{{item.description}}</td>
-              <td style="width: 10%;">{{item.price | currency: 'BRL'}}</td>
-              <td style="width: 10%;">{{item.quantity}}</td>
+              <td><img src="{{item.imagem}}" style="width: 120px;" alt=""></td>
+              <td style="width: 20%;">{{item.nomeDoProduto}}</td>
+              <td style="width: 10%;">{{item.preco | currency: 'BRL'}}</td>
+              <td style="width: 10%;">{{item.quantidade}}</td>
               <td><button (click)="removeProduct(item)" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
             </tr>
             <tr>
               <td colspan="4"></td>
               <td><button (click)="removeAllProduct()" class="btn btn-danger">Esvaziar Carrinho</button></td>
               <td><button routerLink="/produtos" routerLinkActive="router-link-active"  class="btn btn-warning">Compre Mais</button></td>
-              <td><button class="btn btn-success">Finalizar Compra</button></td>
-              <td><strong>Total: {{todosProdutos}}</strong></td>
+              <td><button class="btn btn-success">Finalizar <br> Compra</button></td>
             </tr>
           </tbody>
         </table>

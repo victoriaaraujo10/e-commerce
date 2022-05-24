@@ -11,13 +11,6 @@
   max-height:550px;
   min-width:300px;
   overflow: hidden;
-  border-top: 5px;
-  border-left: 5px;
-  border-right: 5px;
-  border-bottom: 5px;
-  border-color: rgb(152, 83, 184);
-  border-style: solid;
-
 }
 
 .carousel:after{
