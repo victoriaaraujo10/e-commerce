@@ -9,7 +9,7 @@ import { FeedbackUsuarioComponent } from './components/feedback-usuario/feedback
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'produtos', component:ProdutosComponent },
   {path: 'carrinho', component:CarrinhoComponent},
   {path:'cadastrar', component:CadastrarComponent},
