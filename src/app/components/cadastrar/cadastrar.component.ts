@@ -12,19 +12,17 @@ export class CadastrarComponent implements OnInit {
 
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-   
-    
     senha: ['', [Validators.required, Validators.minLength(8)]],
-    
+
   });
 
   cadastroForm = this.fb.group({
-        email2: ['', [ Validators.required,Validators.email]],
-        cpf: ['', [Validators.required, Validators.minLength(11)]],
-        celular: ['', [Validators.required, Validators.minLength(11)]],
-        senha2: ['', [Validators.required, Validators.minLength(8)]],
-        senha3: ['', [Validators.required]],
-  },{
+    email2: ['', [Validators.required, Validators.email]],
+    cpf: ['', [Validators.required, Validators.minLength(11)]],
+    celular: ['', [Validators.required, Validators.minLength(11)]],
+    senha2: ['', [Validators.required, Validators.minLength(8)]],
+    senha3: ['', [Validators.required]],
+  }, {
     validators: this.MustMatch('senha2', 'senha3')
   })
 
@@ -36,15 +34,15 @@ export class CadastrarComponent implements OnInit {
     return this.loginForm.get('email');
   }
 
-   get email2() {
+  get email2() {
     return this.cadastroForm.get('email2');
   }
 
-  get cpf(){
+  get cpf() {
     return this.cadastroForm.get('cpf');
   }
 
-  get celular(){
+  get celular() {
     return this.cadastroForm.get('celular');
   }
 
@@ -58,16 +56,16 @@ export class CadastrarComponent implements OnInit {
     return this.cadastroForm.get('senha3');
   }
 
-  MustMatch(controlName: string, matchingControlName: string){
-    return(formGroup: FormGroup) => {
+  MustMatch(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
-      if(matchingControl.errors && !matchingControl.errors['mustMatch']){
+      if (matchingControl.errors && !matchingControl.errors['mustMatch']) {
         return;
       };
-      if(control.value !== matchingControl.value){
-        matchingControl.setErrors({mustMatch: true});
-      }else{
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ mustMatch: true });
+      } else {
         matchingControl.setErrors(null);
       }
 
@@ -79,7 +77,7 @@ export class CadastrarComponent implements OnInit {
     console.log("funcionando...");
   }
 
-  onCadastro(){
+  onCadastro() {
     alert("Conta criada com sucesso!")
   }
 

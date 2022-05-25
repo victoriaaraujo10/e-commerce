@@ -24,7 +24,7 @@
                                         class="form-control form-control-lg" />
                                     <small class="text-warning" *ngIf="nome?.touched && nome?.invalid">
                                         <span *ngIf="nome?.hasError('required')">Seu nome é Obrigatorio</span>
-                                        <span *ngIf="nome?.hasError('minLength')">O minimo de carecteres é 5</span>
+                                        <span *ngIf="nome?.hasError('minlength')">O minimo de carecteres é 5</span>
                                     </small>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                     <textarea formControlName="feedback" name="feedback" id="form3Examplea6" cols="50" rows="4"></textarea><br>
                                     <small class="text-warning" *ngIf="feedback?.touched && feedback?.invalid">
                                         <span *ngIf="feedback?.hasError('required')">Seu FeedBack é Obrigatorio</span>
-                                        <span *ngIf="feedback?.hasError('minLength')">O minimo de carecteres é 20</span>
+                                        <span *ngIf="feedback?.hasError('minlength')">O minimo de carecteres é 20</span>
                                     </small>
                                 </div>
                             </div>
